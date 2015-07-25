@@ -1,14 +1,29 @@
 package com.yashdalfthegray.androidtutorial.Activities;
 
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.yashdalfthegray.androidtutorial.Models.DrawerItem;
 import com.yashdalfthegray.androidtutorial.R;
 
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
+    public String HEADER_NAME = "Yash Kulshrestha";
+    public String HEADER_EMAIL = "yash.kulshrestha@gmail.com";
+    public int HEADER_IMAGE = 1;
+
+    private RecyclerView mRecyclerView;
+    private RecyclerView.LayoutManager mLayoutManager;
+    private DrawerLayout drawer;
+    private ActionBarDrawerToggle mDrawerToggle;
+    private List<DrawerItem> dataList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
