@@ -25,6 +25,14 @@ public class MainActivity extends AppCompatActivity {
     private ActionBarDrawerToggle mDrawerToggle;
     private List<DrawerItem> dataList;
 
+    private void addItemsToDataList(){
+        dataList.add(new DrawerItem(getString(R.string.title_attendants), R.drawable.ic_perm_identity_black_24dp));
+        dataList.add(new DrawerItem(getString(R.string.title_events), R.drawable.ic_event_black_24dp));
+        dataList.add(new DrawerItem(getString(R.string.title_registration), R.drawable.ic_group_add_black_24dp));
+        dataList.add(new DrawerItem(getString(R.string.title_reports), R.drawable.ic_report_black_24dp));
+        dataList.add(new DrawerItem(getString(R.string.title_settings), R.drawable.ic_settings_black_24dp));
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
